@@ -21,8 +21,8 @@ const Style = createGlobalStyle<StyleProps>`
     background-color: ${({background}) => background};
   }
 
-  html, body, #root {
-    overflow: hidden;
+  body, #root {
+    overflow-x: hidden;
   }
 
   *::-webkit-scrollbar {
@@ -52,7 +52,7 @@ interface PageContainerProps {
 const PageContainer = styled.div<PageContainerProps>`
   width: 100vw;
   background-color: ${({background}) => background};
-	overflow: hidden;
+	overflow-x: hidden;
 `;
 
 interface BackgroundProps {

@@ -57,14 +57,9 @@ const ContentContainer = styled.div<ContentContainerProps>`
   height: ${({height}) => height}px;
   background: ${({background}) => background};
   transition: all 336ms;
-  z-index: 1;
-  color: ${({color}) => color} !important;
-  font-size: ${({fontSize}) => 1 + fontSize / 10}em !important;
-	overflow-scrolling: touch;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	padding: 0 20px 80px 20px;
-	margin: 80px 0;
+  color: ${({color}) => color};
+  font-size: ${({fontSize}) => 1 + fontSize / 10}em;
+  padding: 80px 20px;
 `;
 
 interface TextSelectionPopoverProps {
@@ -244,11 +239,9 @@ export const Reader = () => {
 					isLoading ?
 						<></> :
 						<ContentContainer background={background} height={height} color={foreground} fontSize={fontSize}>
-							<div>
-								{ReactHtmlParser(html, {
-									transform: transform,
-								})}
-							</div>
+							{ReactHtmlParser(html, {
+								transform: transform,
+							})}
 						</ContentContainer>
 				}
 			</Container>
