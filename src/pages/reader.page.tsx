@@ -60,6 +60,7 @@ const ContentContainer = styled.div<ContentContainerProps>`
   color: ${({color}) => color};
   font-size: ${({fontSize}) => 1 + fontSize / 10}em;
   padding: 80px 20px;
+	overflow-y: scroll;
 `;
 
 interface TextSelectionPopoverProps {
